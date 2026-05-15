@@ -1,3 +1,29 @@
+arr = [-10, -20, -5, -15]
+
+first = float('-inf')
+second = float('-inf')
+third = float('-inf')
+
+for num in arr:
+
+    if num > first:
+
+        third = second
+        second = first
+        first = num
+
+    elif num > second and num != first:
+
+        third = second
+        second = num
+
+    elif num > third and num != second and num != first:
+
+        third = num
+
+print("Third Largest:", third)
+print(".....................................   ")
+
 arr = [3,1,4,1,5]
 n = len(arr)
 prefix=[0]*n
