@@ -1,6 +1,16 @@
-# rotate an array by k times optimal solution
-
-
+# maximum number of consecutive 1s in an array
+arr =[1, 1, 0, 1, 1, 1, 0, 1]
+count=0
+max_count =0
+for num in arr:
+    if num==1:
+        count+=1
+        if count> max_count:
+            max_count=count
+    else :
+        count=0
+        
+print(max_count)  
 # rotate an array by k times
 arr = [1, 2, 3, 4, 5]
 k = 2
