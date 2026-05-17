@@ -1,3 +1,22 @@
+# plus one
+arr = [1, 2, 3]
+n = len(arr)
+carry = True          # assume we need to add 1
+
+for i in range(n-1, -1, -1):
+    if carry:
+        arr[i] += 1
+        if arr[i] < 10:
+            carry = False    # no more carry needed
+        else:
+            arr[i] = 0       # carry continues
+
+if carry:                    # only if still remaining
+    arr.insert(0, 1)
+
+print(arr)
+
+
 # wave array
 arr = [3, 6, 5, 10, 7, 20]
 n = len(arr)
