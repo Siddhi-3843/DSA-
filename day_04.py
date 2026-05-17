@@ -1,3 +1,17 @@
+# sorted or not  array 
+arr = [1, 2, 3, 5, 4]
+found_sorted = True
+
+for i in range(0, len(arr)-1):
+    if arr[i] > arr[i+1]:
+        found_sorted = False
+        break
+
+if found_sorted == True:
+    print("Array is sorted")
+else:
+    print("Not Sorted")
+
 # plus one
 arr = [1, 2, 3]
 n = len(arr)
