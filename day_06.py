@@ -1,3 +1,26 @@
+# alternate positive and negatives
+arr = [-1, 2, -3, 4, 5, 6, -7, 8, 9]
+
+neg = [x for x in arr if x < 0]
+pos = [x for x in arr if x >= 0]
+
+result = []
+i, j = 0, 0
+
+# alternate neg and pos
+while i < len(neg) and j < len(pos):
+    result.append(neg[i])   # add negative
+    result.append(pos[j])   # add positive
+    i += 1
+    j += 1
+
+# append remaining
+result += neg[i:]
+result += pos[j:]
+
+
+print(result)
+
 # Reverse array in group
 arr = [1, 2, 3, 4, 5]
 k = 3
