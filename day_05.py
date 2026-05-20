@@ -1,3 +1,15 @@
+# Buy and sell stock (multiple transactions allowed)    prices = [7, 1, 5, 3, 6, 4]
+prices = [7, 1, 5, 3, 6, 4]
+profit = 0
+
+for i in range(1, len(prices)):
+    if prices[i] > prices[i-1]:  # if current price is higher than previous
+        profit += prices[i] - prices[i-1]  # add the profit from this transaction   
+        
+
+print(profit)
+
+
 # stock price buy and Sell problem
 
 def max_profit(prices):
