@@ -1,3 +1,23 @@
+# Find missing ranges
+
+arr = [0, 1, 3, 50, 75]
+lower, upper = 0, 99
+result = []
+
+# add boundaries
+nums = [lower-1] + arr + [upper+1]
+
+for i in range(1, len(nums)):
+    gap = nums[i] - nums[i-1]
+    if gap == 2:
+        result.append(str((nums[i-1]+1)))          # single missing
+    elif gap > 2:
+         result.append(str(nums[i-1] + 1) + "->" + str(nums[i] - 1))  # range missing
+
+print(result)
+
+
+
 # alternate positive and negatives
 arr = [-1, 2, -3, 4, 5, 6, -7, 8, 9]
 
