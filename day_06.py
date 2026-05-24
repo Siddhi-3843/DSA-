@@ -1,3 +1,27 @@
+arr = [1, 2, 3]
+n = len(arr)
+total = 0
+
+for i in range(n):
+    total += arr[i] * (i + 1) * (n - i)
+
+print(total)
+
+
+# sum of all subarrays
+arr = [1, 2, 3]
+total = 0
+
+for i in range(len(arr)):
+    curr_sum = 0
+    for j in range(i, len(arr)):
+        curr_sum += arr[j]
+        total += curr_sum
+
+print(total)
+
+
+
 # Find missing ranges
 
 arr = [0, 1, 3, 50, 75]
